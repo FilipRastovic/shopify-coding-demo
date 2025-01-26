@@ -8,3 +8,20 @@
 ehthumbs.db
 Thumbs.db
 .shopify
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+jspm_packages/
+
+# Tailwind CSS output
+*.css
+*.css.map
+
+# Ignore .env files
+.env
