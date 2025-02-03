@@ -22,6 +22,7 @@ jspm_packages/
 # Tailwind CSS output
 *.css
 *.css.map
+!assets/filip.css
 
 # Ignore .env files
 .env
