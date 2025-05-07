@@ -1,0 +1,38 @@
+{% comment %}
+  Renders a notification box for the product.
+
+  Accepts:
+  - product: {Object} the product object to display in the notification (required)
+
+  Usage:
+  {% render 'filip-notification-box', product: product %}
+{% endcomment %}
+
+<div
+  id="notification-box"
+  class="notification absolute lg:top-5 -lg:right- z-10 pl-3 pt-3 pb-2 pr-5 border bg-white flex items-center hidden"
+>
+  <img
+    alt="ecommerce"
+    class="w-[67px] h-[52px] main-product-image"
+    src="{{ product.featured_image | img_url: '500x500' }}"
+    width="auto"
+    height="auto"
+  >
+  <div class="flex flex-col gap-[2px] ml-7 lg:w-[250px]">
+    <span class="text-primary text-[16px] font-poppins leading-[21px]">{{ product.title }}</span>
+    <span
+      id="notification-size"
+      class="text-primary text-[16px] font-poppins leading-[21px] notification-size uppercase"
+      >MEDIUM</span
+    >
+    <span
+      class="rounded-full w-10 h-10 focus:outline-none cursor-pointer mb-3 notification-swatch"
+      style="background-color: #5A31F4;"
+    ></span>
+  </div>
+  <div class="flex flex-col content-between ml-5 align-right">
+    <span class="text-[#009959] font-semibold text-[16px] font-poppins text-right">ADDED</span>
+    <a href="/cart" class="text-[16px] font-poppins text-right mb-2 mt-10 underline text-[#000000]">View Cart</a>
+  </div>
+</div>

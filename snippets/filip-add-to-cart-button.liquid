@@ -1,0 +1,26 @@
+{% comment %}
+  Renders a quantity picker and add-to-cart button.
+
+  Usage:
+  {% render 'filip-quantity-and-add-to-cart' %}
+{% endcomment %}
+
+<div class="w-full lg:ml-auto flex flex-col">
+  <span class="text-primary order-last lg:order-first text-[11px] lg:text-[14px] font-poppins ml-5 mb-3 text-center">
+    Free US Shipping over $65 | Free US Returns
+  </span>
+  <button
+    id="add-to-cart-button"
+    class="w-full border-0 py-6 px-6 w-full mb-3 bg-[#F8C063] text-primary text-[16px] mt-5 lg:mt-0 cursor-pointer"
+  >
+    ADD TO CART - $1000.00 <span class="text-[#AD9F98]">$1010.00</span>
+  </button>
+  <div class="flex items-center text-center">
+    <span class="text-primary text-[11px] lg:text-[14px] font-poppins mr-2">
+      4 interest-free installments of $18.00 with
+    </span>
+    <svg width="60" height="14" viewBox="0 0 60 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- SVG content -->
+    </svg>
+  </div>
+</div>

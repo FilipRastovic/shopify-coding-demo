@@ -1,0 +1,20 @@
+{% comment %}
+  Renders a star rating component with a review count.
+
+  Accepts:
+  - rating: {Number} (optional) The number of stars to display (default: 5)
+  - reviews_count: {Number} (optional) The number of reviews to display (default: 0)
+
+  Usage:
+  {% render 'filip-reviews-stars', rating: 5, reviews_count: 107 %}
+{% endcomment %}
+
+<span class="flex items-center">
+  {% for i in (1..rating) %}
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 5.34725L8.913 4.99983L6.99721 0L5.08143 4.99983L0 5.34725L3.89741 8.78506L2.61849 14L6.99721 11.1248L11.376 14L10.097 8.78506L14 5.34725Z" fill="#F8C063"/>
+    </svg>
+  {% endfor %}
+
+  <span class="text-primary text-[14px] font-poppins ml-3">{{ reviews_count }} Reviews</span>
+</span>

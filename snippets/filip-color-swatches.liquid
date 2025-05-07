@@ -1,0 +1,55 @@
+{% comment %}
+  Renders a color swatches component for selecting product variants.
+
+  Accepts:
+  - product: {Object} The product object containing variants (required)
+
+  Usage:
+  {% render 'filip-color-swatches', product: product %}
+{% endcomment %}
+<div class="mb-13">
+  <p class="text-primary font-poppins uppercase mb-6">{{ section.settings.choose_your_color_text }}</p>
+  <div class="flex">
+    {% assign blue_variant = product.variants | where: 'option1', 'Blue' | first %}
+    {% assign yellow_variant = product.variants | where: 'option1', 'Yellow' | first %}
+    {% assign brown_variant = product.variants | where: 'option1', 'Brown' | first %}
+    {% assign beige_variant = product.variants | where: 'option1', 'Beige' | first %}
+    {% assign gray_variant = product.variants | where: 'option1', 'Gray' | first %}
+
+    <span
+      class="color-swatch border-2 border-gray-300 rounded-full w-14 h-14 focus:outline-none cursor-pointer"
+      style="background-color: #5A31F4;"
+      data-image="{{ 'blue_500x500.png' | file_url }}"
+      data-color="#5A31F4"
+      data-variant-id="{{ blue_variant.id }}"
+    ></span>
+    <span
+      class="color-swatch ml-5 rounded-full w-14 h-14 focus:outline-none cursor-pointer"
+      style="background-color: #F8C063;"
+      data-image="{{ 'yellow_500x500.png' | file_url }}"
+      data-color="#F8C063"
+      data-variant-id="{{ yellow_variant.id }}"
+    ></span>
+    <span
+      class="color-swatch ml-5 rounded-full w-14 h-14 focus:outline-none cursor-pointer"
+      style="background-color: #61402E;"
+      data-image="{{ 'brown_500x500.png' | file_url }}"
+      data-color="#61402E"
+      data-variant-id="{{ brown_variant.id }}"
+    ></span>
+    <span
+      class="color-swatch ml-5 rounded-full w-14 h-14 focus:outline-none cursor-pointer"
+      style="background-color: #B09F97;"
+      data-image="{{ 'gray_500x500.png' | file_url }}"
+      data-color="#B09F97"
+      data-variant-id="{{ gray_variant.id }}"
+    ></span>
+    <span
+      class="color-swatch ml-5 rounded-full w-14 h-14 focus:outline-none cursor-pointer"
+      style="background-color: #BC912E;"
+      data-image="{{ 'beige_500x500.png' | file_url }}"
+      data-color="#BC912E"
+      data-variant-id="{{ beige_variant.id }}"
+    ></span>
+  </div>
+</div>

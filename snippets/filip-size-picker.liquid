@@ -1,0 +1,33 @@
+{% comment %}
+  Renders a size picker dropdown for selecting product variants.
+
+  Accepts:
+  - product: {Object} The product object containing variants (required)
+
+  Usage:
+  {% render 'filip-size-picker', product: product %}
+{% endcomment %}
+<div class="mb-10 lg:mb-13">
+  <p class="text-primary font-poppins uppercase mb-6">Choose your size:</p>
+  <div class="relative select-wrapper">
+    <select
+      id="variant-select"
+      class="w-full font-poppins uppercase font-medium border border-primary py-4 text-[16px] text-primary focus:outline-hidden outline-none pl-10 pr-10 custom-select"
+    >
+      {% assign unique_sizes = '' %}
+      {% for variant in product.variants %}
+        {% if unique_sizes contains variant.option2 %}
+          {% continue %}
+        {% endif %}
+        <option
+          value="{{ variant.id }}"
+          data-size="{{ variant.option2 }}"
+          data-price="{{ variant.price | divided_by: 100.0 }}"
+        >
+          {{ variant.option2 }}
+        </option>
+        {% assign unique_sizes = unique_sizes | append: variant.option2 | append: ',' %}
+      {% endfor %}
+    </select>
+  </div>
+</div>

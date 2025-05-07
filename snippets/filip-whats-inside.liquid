@@ -1,0 +1,38 @@
+{% comment %}
+  Renders a "What's Inside?" section with a customizable list of items.
+
+  Accepts:
+  - section: {Object} The section object containing settings for the list items (required)
+
+  Usage:
+  {% render 'filip-whats-inside', section: section %}
+{% endcomment %}
+
+<p class="text-primary font-poppins font-medium mb-3">{{ section.settings.whats_inside_text }}</p>
+
+<ul class="list-none mb-13">
+  <li class="flex mb-3">
+    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="21" height="21" rx="10.5" fill="#F8C063"/>
+      <path d="M8.6625 15.0094L4.3875 10.7344L5.45625 9.66563L8.6625 12.8719L15.5438 5.99063L16.6125 7.05938L8.6625 15.0094Z" fill="#61402E"/>
+    </svg>
+    <div>
+      <p class="text-primary font-poppins uppercase ml-5">{{ section.settings.list_item_1_title }}</p>
+      <p class="text-primary text-[14px] font-poppins ml-5">
+        {{ section.settings.list_item_1_description }}
+      </p>
+    </div>
+  </li>
+  <li class="flex">
+    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="21" height="21" rx="10.5" fill="#F8C063"/>
+      <path d="M8.6625 15.0094L4.3875 10.7344L5.45625 9.66563L8.6625 12.8719L15.5438 5.99063L16.6125 7.05938L8.6625 15.0094Z" fill="#61402E"/>
+    </svg>
+    <div>
+      <p class="text-primary font-poppins uppercase ml-5">{{ section.settings.list_item_2_title }}</p>
+      <p class="text-primary text-[14px] font-poppins ml-5">
+        {{ section.settings.list_item_2_description }}
+      </p>
+    </div>
+  </li>
+</ul>

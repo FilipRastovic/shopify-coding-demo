@@ -1,0 +1,42 @@
+{% comment %}
+  Renders a product image gallery.
+
+  Accepts:
+  - product: {Object} Product liquid object (required)
+  - images: {Array} Product images to display (optional)
+
+  Usage:
+  {% render 'filip-product-image-gallery', product: product %}
+{% endcomment %}
+
+<img
+  id="prev-button"
+  src="{{ 'swiper-button-prev.png' | asset_url }}"
+  class="absolute z-10 top-45 left-3 lg:top-80 cursor-pointer"
+>
+<img
+  id="next-button"
+  src="{{ 'swiper-button-next.png' | asset_url }}"
+  class="absolute z-10 top-45 right-4 lg:right-31 lg:top-80 cursor-pointer"
+>
+
+<img
+  alt="ecommerce"
+  class="h-[253px] md:h-[420px] main-product-image"
+  src="{{ product.featured_image | img_url: '500x500' }}"
+  width="500"
+  height="500"
+  id="main-product-image"
+>
+<div class="flex flex-wrap gap-2.5 md:gap-4 mt-4">
+  {% for image in product.images %}
+    <div class="w-[41px] h-[32px] md:w-[67px] md:h-[52px]">
+      <img
+        src="{{ image | img_url: '67x52' }}"
+        alt="Product Color"
+        class="w-full h-full object-cover small-product-image"
+        data-large-src="{{ image | img_url: '500x500' }}"
+      >
+    </div>
+  {% endfor %}
+</div>

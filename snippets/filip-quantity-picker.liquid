@@ -1,0 +1,22 @@
+{% comment %}
+  Renders a quantity picker for selecting product quantities.
+
+  Usage:
+  {% render 'filip-quantity-picker' %}
+{% endcomment %}
+
+<div class="qtydiv w-full lg:w-auto lg:pr-6">
+  <div class="qtybox text-center">
+    <span class="btnqty qtyminus icon icon-minus">-</span>
+    <input
+      type="text"
+      id="quantity"
+      name="quantity"
+      value="01"
+      min="1"
+      class="quantity-selector quantity-input font-poppins"
+      readonly=""
+    >
+    <span class="btnqty qtyplus icon icon-plus">+</span>
+  </div>
+</div>
