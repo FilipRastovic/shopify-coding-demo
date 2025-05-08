@@ -92,6 +92,15 @@
             "page": ""
           }
         },
+        "collapsible_tab_XGaziN": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "content": "",
+            "page": ""
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -112,6 +121,7 @@
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
+        "collapsible_tab_XGaziN",
         "share"
       ],
       "settings": {
