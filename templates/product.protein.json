@@ -9,18 +9,6 @@
  */
 {
   "sections": {
-    "filip_product_ebEFcH": {
-      "type": "filip-product",
-      "settings": {
-        "product": "awesome-product",
-        "whats_inside_text": "What's inside?",
-        "list_item_1_title": "1 x Lorem ipsum dolor",
-        "list_item_1_description": "Donec sodales sagittis magna sed consequat, leo eget bibendum sodales",
-        "list_item_2_title": "1 x Lorem ipsum dolor",
-        "list_item_2_description": "Donec sodales sagittis magna sed consequat, leo eget bibendum sodales",
-        "choose_your_color_text": "Choose your color:"
-      }
-    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -242,7 +230,6 @@
     }
   },
   "order": [
-    "filip_product_ebEFcH",
     "main",
     "image-with-text",
     "multicolumn",
